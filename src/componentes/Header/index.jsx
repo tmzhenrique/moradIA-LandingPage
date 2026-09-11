@@ -31,7 +31,7 @@ const LogoMoradIA = styled.img`
     height: 20px;
 `
 
-const EstiloStrong = styled.strong`
+export const EstiloStrong = styled.strong`
     color: #4F46E5;
 `
 
