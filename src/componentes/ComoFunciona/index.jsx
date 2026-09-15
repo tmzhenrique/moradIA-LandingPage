@@ -1,9 +1,12 @@
 import styled from "styled-components";
 import { EstiloStrong } from "../Header";
+import '../../index.css';
+import FrameExplicacoes from "./FrameExplicacoes";
 
 const ComoFuncionaSection = styled.section`
     display: flex;
-    height: 500px;
+    flex-direction: column;
+    background-color: #FFFF;
     border-top: 1px solid #E5E7EB;
     border-bottom: 1px solid #E5E7EB;
     padding: 96px 80px;
@@ -34,7 +37,7 @@ function ComoFunciona(){
                 <FraseSub>MORAR BEM É UMA CIÊNCIA</FraseSub>
                 <FrasePrincipal>Como funciona o Morad<EstiloStrong>IA</EstiloStrong>?</FrasePrincipal>
             </div>
-
+            <FrameExplicacoes/>
         </ComoFuncionaSection>
             
         

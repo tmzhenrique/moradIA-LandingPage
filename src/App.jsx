@@ -1,4 +1,3 @@
-import styled from 'styled-components';
 import Header from './componentes/Header/index.jsx';
 import Apresentacao from './componentes/Apresentacao/index.jsx';
 import ComoFunciona from './componentes/ComoFunciona/index.jsx'

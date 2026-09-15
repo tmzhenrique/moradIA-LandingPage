@@ -38,7 +38,7 @@ export const EstiloStrong = styled.strong`
 const DivLinksHeader = styled.div`
     display: flex;
     align-items: center;
-    gap: 22px;
+    gap: 7px;
 `
 
 const AncoraNav = styled.a`
@@ -46,7 +46,7 @@ const AncoraNav = styled.a`
     font-family: "Inter", sans-serif;
     font-weight: 500;
     font-size: 14px;
-    padding: 4px 14px;
+    padding: 10px 20px;
     color: #6B7280;
     cursor: pointer;
 
@@ -83,8 +83,7 @@ function Header(){
                 <AncoraNav>Indicadores</AncoraNav>
                 <AncoraNav>Preços</AncoraNav>
                 <AncoraNavDestaque>Encontrar minha cidade</AncoraNavDestaque>
-            </DivLinksHeader>
-                   
+            </DivLinksHeader>  
         </HeaderLP>
     )
 }

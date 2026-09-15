@@ -1,9 +1,12 @@
-import styled from "styled-components"
+import styled from "styled-components";
+import imagem_mulher_celular from "../../assets/imagem_mulher_celular.jpeg";
+import '../../index.css';
 
 const CampoApresentacao = styled.section`
     display: flex;
     padding: 80px 100px;
     gap: 64px;
+    align-items: center;
 `
 const DivTextos = styled.div`
     display: flex;
@@ -12,8 +15,11 @@ const DivTextos = styled.div`
     gap: 32px;
 `
 
-const DivImagem = styled.div`
-    padding: 40px;
+const ImagemApresentacao = styled.img`
+    width: 580px;
+    height: 400px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.3);
 `
 const TextosApresentacao = styled.div`
     display: flex;
@@ -23,9 +29,7 @@ const TextosApresentacao = styled.div`
 
 const TituloApresentacao = styled.h2`
     margin: 0;
-    font-stretch: 100%;
     line-height: 110.00000000000001%;
-    style: extra-bold;
     font-family: var(--fonte-moradia);
     font-weight: 800;
     font-size: 56px;
@@ -70,7 +74,7 @@ const AncoraApresentacaoTransparente = styled.a`
     gap: 8px;
 
     &:hover{    
-        border-radius: 8px;
+        border-radius: 12px;
         background-color: rgba(238, 242, 255,0.7); 
     }
 `
@@ -94,14 +98,14 @@ function Apresentacao(){
                     <AncoraApresentacaoTransparente>
                         <AncoraApresentacaoTransparenteTexto>Como funciona</AncoraApresentacaoTransparenteTexto>
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3.7995 8H12.2005M7.99998 12.2005L12.2005 8L7.99998 3.79952" stroke="#4F46E5" stroke-width="2" stroke-linecap="round"/>
+                               <path d="M3.7995 8H12.2005M7.99998 12.2005L12.2005 8L7.99998 3.79952" stroke="#4F46E5" stroke-width="2" stroke-linecap="round"/>
                         </svg>
                     </AncoraApresentacaoTransparente>
                     
 
                 </AncorasApresentacao>
             </DivTextos>
-            <DivImagem></DivImagem>
+            <ImagemApresentacao src={imagem_mulher_celular} /> 
         </CampoApresentacao>
     )
 }
