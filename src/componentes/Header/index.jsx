@@ -79,7 +79,7 @@ function Header(){
                 <TextoMoradIA>Morad<EstiloStrong>IA</EstiloStrong></TextoMoradIA>
             </MoradIA>  
             <DivLinksHeader>
-                <AncoraNav href='https://github.com/tmzhenrique' target='blank'>Como funciona</AncoraNav> 
+                <AncoraNav href="#ComoFunciona">Como funciona</AncoraNav> 
                 <AncoraNav>Indicadores</AncoraNav>
                 <AncoraNav>Preços</AncoraNav>
                 <AncoraNavDestaque>Encontrar minha cidade</AncoraNavDestaque>

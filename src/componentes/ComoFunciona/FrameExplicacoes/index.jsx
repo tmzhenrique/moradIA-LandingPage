@@ -1,4 +1,6 @@
 import styled from "styled-components"
+import { Titulo } from "../../ComponentesPadrao/Titulo"
+
 
 const dadosExplicaoes = [
     { 
@@ -33,26 +35,30 @@ const dadosExplicaoes = [
     }
 ]
 
+
 const GradeExplicacoes = styled.div`
     display: flex;
     gap: 32px;
 `
 const DivExplicacoes = styled.div`
+    display:flex;
+    flex-direction: column;
     background-color: #F8FAFC;
     border-radius: 16px;
     padding: 32px;
+    gap: 20px;
 `
-const TituloExplicacao = styled.h1`
-    font-family: var(--fonte-moradia);
-    font-size: 18px;
-    font-weight: 700;
+
+const TextosExplicacao = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 `
 
 const TextoExplicacao = styled.p`
     font-family: var(--fonte-moradia);
     font-weight: 400;
     color: #6B7280;
-
 `
 const Svg = styled.div`
     display: flex;
@@ -68,18 +74,19 @@ function FrameExplicacoes(){
     return(
         <GradeExplicacoes>
                 {dadosExplicaoes.map((item,index) =>(
-                    <div>
                         <DivExplicacoes key={index}>
-                            <Svg>
-                                {item.path}
-                            </Svg>
-                            <div>
-                                <TituloExplicacao>{item.titulo}</TituloExplicacao>
-                                <TextoExplicacao>{item.texto}</TextoExplicacao>
-                            </div>
-                        </DivExplicacoes>
-                    </div>
-                
+                                <Svg>
+                                    {item.path}
+                                </Svg>
+                                <TextosExplicacao>
+                                    <Titulo 
+                                        tamanho='18px' 
+                                        peso='700' 
+                                        posicao='flex-start'
+                                    >{item.titulo}</Titulo>
+                                    <TextoExplicacao>{item.texto}</TextoExplicacao>
+                                </TextosExplicacao>
+                        </DivExplicacoes> 
             ))}
                 
         </GradeExplicacoes>

@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { EstiloStrong } from "../Header";
 import '../../index.css';
 import FrameExplicacoes from "./FrameExplicacoes";
+import DivTitulos from "../ComponentesPadrao/DivTitulos";
 
 const ComoFuncionaSection = styled.section`
     display: flex;
@@ -14,33 +15,17 @@ const ComoFuncionaSection = styled.section`
     justify-content: center;
 `   
 
-const FraseSub = styled.p`
-    font-family: var(--fonte-moradia);
-    color: var(--roxo-moradia);
-    font-weight: 700;
-    font-size: 14px;
-    text-align: center;
-`
-const FrasePrincipal = styled.h2`
-    color: #111827;
-    font-family: var(--fonte-moradia);
-    font-weight: 800;
-    font-size: 36px;
-    text-align: center;
-    margin: 0;
-`
-
-function ComoFunciona(){
+function ComoFunciona({id}){
     return(
-        <ComoFuncionaSection>
-            <div style={{gap:'30px'}}>
-                <FraseSub>MORAR BEM É UMA CIÊNCIA</FraseSub>
-                <FrasePrincipal>Como funciona o Morad<EstiloStrong>IA</EstiloStrong>?</FrasePrincipal>
-            </div>
+        <ComoFuncionaSection id={id}>
+            <DivTitulos
+                subtitulo={'MORAR BEM É UMA CIÊNCIA'}
+                titulo={
+                    <>Como funciona o Morad<EstiloStrong>IA</EstiloStrong>?</>
+                }
+            ></DivTitulos>
             <FrameExplicacoes/>
-        </ComoFuncionaSection>
-            
-        
+        </ComoFuncionaSection> 
     )
 }
 

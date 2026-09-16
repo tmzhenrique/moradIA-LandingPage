@@ -3,9 +3,12 @@
 :root {
     --fonte-moradia: 'Inter', sans-serif;
     --roxo-moradia: #4F46E5;
+    --preto-titulo: #111827;
 }
 
-
+html{
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
