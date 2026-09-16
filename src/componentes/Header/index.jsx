@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import logo from '../../assets/MoradIALogo.svg'
+import LogoMoradia from '../ComponentesPadrao/LogoMoradia/index.jsx';
 
 const HeaderLP = styled.header`
   display: flex;
@@ -9,30 +9,6 @@ const HeaderLP = styled.header`
   height: 80px;
   background-color: #FFF;
   border-bottom: solid 1px #E5E7EB; 
-`
-
-const MoradIA = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-`
-
-const TextoMoradIA = styled.h2`
-    font-weight: 700;
-    font-family: var(--fonte-moradia);
-    color:black;
-`
-const LogoMoradIA = styled.img`
-    padding: 5px;
-    border-radius: 7px;
-    background-color: #4F46E5;
-    width: 20px;
-    height: 20px;
-`
-
-export const EstiloStrong = styled.strong`
-    color: #4F46E5;
 `
 
 const DivLinksHeader = styled.div`
@@ -74,13 +50,10 @@ const AncoraNavDestaque = styled(AncoraNav)`
 function Header(){
     return(
         <HeaderLP>
-            <MoradIA>
-                <LogoMoradIA src={logo}></LogoMoradIA>
-                <TextoMoradIA>Morad<EstiloStrong>IA</EstiloStrong></TextoMoradIA>
-            </MoradIA>  
+            <LogoMoradia></LogoMoradia>
             <DivLinksHeader>
-                <AncoraNav href='https://github.com/tmzhenrique' target='blank'>Como funciona</AncoraNav> 
-                <AncoraNav>Indicadores</AncoraNav>
+                <AncoraNav href="#ComoFunciona">Como funciona</AncoraNav> 
+                <AncoraNav href="#Indicadores">Indicadores</AncoraNav>
                 <AncoraNav>Preços</AncoraNav>
                 <AncoraNavDestaque>Encontrar minha cidade</AncoraNavDestaque>
             </DivLinksHeader>  

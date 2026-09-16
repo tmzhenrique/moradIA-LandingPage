@@ -1,12 +1,16 @@
 import styled from "styled-components";
+import imagem_mapa from "../../assets/imagem_mapa.jpg";
 import imagem_mulher_celular from "../../assets/imagem_mulher_celular.jpeg";
 import '../../index.css';
+import { Texto } from "../ComponentesPadrao/Texto";
+import { Titulo } from "../ComponentesPadrao/Titulo";
 
 const CampoApresentacao = styled.section`
     display: flex;
     padding: 80px 100px;
-    gap: 64px;
+    gap: 100px;
     align-items: center;
+    justify-content: center;
 `
 const DivTextos = styled.div`
     display: flex;
@@ -29,18 +33,12 @@ const TextosApresentacao = styled.div`
 
 const TituloApresentacao = styled.h2`
     margin: 0;
-    line-height: 110.00000000000001%;
+    
     font-family: var(--fonte-moradia);
     font-weight: 800;
     font-size: 56px;
 `
-const DescricaoApresentacao = styled.p`
-    font-family: var(--fonte-moradia);
-    text-align: left;
-    font-weight: 400;
-    font-size: 18px;
-    color: #6B7280;
-`
+
 const AncorasApresentacao = styled.div`
     display: flex;
     align-items: center;
@@ -90,8 +88,8 @@ function Apresentacao(){
         <CampoApresentacao>
             <DivTextos>
                 <TextosApresentacao>
-                    <TituloApresentacao>Encontre a cidade onde sua vida faz mais sentido</TituloApresentacao>
-                    <DescricaoApresentacao>Descubra quais cidades combinam com seu estilo de vida, orçamento, objetivos e preferências. Nós analisamos centenas de dados para você morar no lugar certo.</DescricaoApresentacao>
+                    <Titulo tamanho='56px' posicao='flex-start' altura='110%'>Encontre a cidade onde sua vida faz mais sentido</Titulo>
+                    <Texto>Descubra quais cidades combinam com seu estilo de vida, orçamento, objetivos e preferências. Nós analisamos centenas de dados para você morar no lugar certo.</Texto>
                 </TextosApresentacao>
                 <AncorasApresentacao>
                     <AncoraApresentacaoRoxo>Encontrar minha cidade</AncoraApresentacaoRoxo>
