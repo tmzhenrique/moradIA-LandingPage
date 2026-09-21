@@ -53,11 +53,7 @@ function Header(){
             <LogoMoradia></LogoMoradia>
             <DivLinksHeader>
                 <AncoraNav href="#ComoFunciona">Como funciona</AncoraNav> 
-<<<<<<< HEAD
-                <AncoraNav>Indicadores</AncoraNav>
-=======
                 <AncoraNav href="#Indicadores">Indicadores</AncoraNav>
->>>>>>> dev
                 <AncoraNav>Preços</AncoraNav>
                 <AncoraNavDestaque>Encontrar minha cidade</AncoraNavDestaque>
             </DivLinksHeader>  

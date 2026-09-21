@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import DivTitulos from "../ComponentesPadrao/DivTitulos";
-
-
-function Indicadores(){
-    return(
-       <DivTitulos
-        titulo={'O que nós analisamos'}
-        subtitulo={'DADOS QUE IMPORTAM'}
-       ></DivTitulos>
-=======
 import styled from "styled-components";
 import DivTitulos from "../ComponentesPadrao/DivTitulos";
 import FrameIndicadores from "./FrameIndicadores";
@@ -43,7 +32,6 @@ function Indicadores({id}){
                 <FrameIndicadores lista = {listaIndicadores2}/>
             </DivIndicadores>      
         </SectionIndicadores>
->>>>>>> dev
     )
 }
 
