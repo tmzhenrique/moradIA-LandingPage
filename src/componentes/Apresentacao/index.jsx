@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import imagem_mapa from "../../assets/imagem_mapa.jpg";
 import imagem_mulher_celular from "../../assets/imagem_mulher_celular.jpeg";
 import '../../index.css';
 import { Texto } from "../ComponentesPadrao/Texto";

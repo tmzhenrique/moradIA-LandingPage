@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { EstiloStrong } from "../Header";
+import { EstiloStrong } from "../ComponentesPadrao/LogoMoradia";
 import '../../index.css';
 import FrameExplicacoes from "./FrameExplicacoes";
 import DivTitulos from "../ComponentesPadrao/DivTitulos";
