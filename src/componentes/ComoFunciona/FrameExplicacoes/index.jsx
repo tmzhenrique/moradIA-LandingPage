@@ -76,11 +76,7 @@ function FrameExplicacoes(){
                 {dadosExplicaoes.map((item,index) =>(
                         <DivExplicacoes key={index}>
                                 <Svg>
-<<<<<<< HEAD
-                                    {item.path}
-=======
                                     {item.svgsimbolo}
->>>>>>> dev
                                 </Svg>
                                 <TextosExplicacao>
                                     <Titulo 
