@@ -83,9 +83,9 @@ const AncoraApresentacaoTransparenteTexto = styled.h3`
     font-weight: 600;
     color: var(--roxo-moradia);
 `
-function Apresentacao(){
+function Apresentacao({id}){
     return(
-        <CampoApresentacao>
+        <CampoApresentacao id={id}>
             <DivTextos>
                 <TextosApresentacao>
                     <Titulo tamanho='56px' posicao='flex-start' altura='110%'>Encontre a cidade onde sua vida faz mais sentido</Titulo>

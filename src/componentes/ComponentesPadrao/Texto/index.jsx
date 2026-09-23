@@ -5,5 +5,5 @@ export const Texto = styled.p`
     text-align: left;
     font-weight: 400;
     font-size: ${props => props.tamanho || '18px'};
-    color: #6B7280;
+    color: ${props => props.cor || '#6B7280'};
 `

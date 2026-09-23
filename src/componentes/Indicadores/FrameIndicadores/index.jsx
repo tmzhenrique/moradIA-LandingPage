@@ -6,6 +6,7 @@ import { listaIndicadores } from "./ListaIndicadores/listaIndicadores1";
 const DivIndicadores = styled.div`
     display: flex;
     gap: 24px;
+    justify-content: center;
 `
 const DivIndividual = styled.div`
     display: flex;

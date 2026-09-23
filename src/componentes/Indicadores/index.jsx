@@ -17,6 +17,7 @@ const SectionIndicadores = styled.section`
 const DivIndicadores = styled.div`
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 24px;
 `
 
