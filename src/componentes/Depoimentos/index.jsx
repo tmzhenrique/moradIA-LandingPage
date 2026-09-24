@@ -11,9 +11,9 @@ const SectionDepoimentos = styled.section`
     gap: 15px;
 `
 
-function Depoimentos(){
+function Depoimentos({id}){
     return(
-        <SectionDepoimentos>
+        <SectionDepoimentos id={id}>
             <TituloDepoimentos/>
             <Relatos/>
             <DadosAvaliacao/>

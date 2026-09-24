@@ -1,18 +1,26 @@
 import styled from "styled-components";
 import { Titulo } from "../../ComponentesPadrao/Titulo";
 import { Texto } from "../../ComponentesPadrao/Texto";
+import { useContagem } from "../../../hooks/useContagem";
+import { useVisivel } from "../../../hooks/useVisivel";
 
 const dados = [
     {
-        titulo: '4,8/5',
+        valorFinal: 4.8,
+        casasDecimais: 1,
+        sufixo: '/5',
         subtitulo: 'avaliação média dos usuários'
     },
     {
-        titulo: '12 mil+',
+        valorFinal: 12,
+        casasDecimais: 0,
+        sufixo: ' mil+',
         subtitulo: 'matches de cidade gerados'
     },
     {
-        titulo: '86%',
+        valorFinal: 86,
+        casasDecimais: 0,
+        sufixo: '%',
         subtitulo: 'recomendariam o MoradIA'
     }
 ]
@@ -29,15 +37,23 @@ const DadoApresentado = styled.div`
     gap: 10px;
 `
 
+function DadoAvaliacao({ valorFinal, casasDecimais, sufixo, subtitulo }) {
+    const [referencia, estaVisivel] = useVisivel();
+    const numeroExibido = useContagem({ valorFinal, casasDecimais, iniciar: estaVisivel });
+
+    return (
+        <DadoApresentado ref={referencia}>
+            <Titulo tamanho='30px'>{numeroExibido}{sufixo}</Titulo>
+            <Texto tamanho='15px'>{subtitulo}</Texto>
+        </DadoApresentado>
+    )
+}
 
 function DadosAvaliacao(){
     return(
         <DivAvaliacoes>
             {dados.map((dado,index) => (
-                <DadoApresentado key={index}>
-                    <Titulo tamanho='30px'>{dado.titulo}</Titulo>
-                    <Texto tamanho='15px'>{dado.subtitulo}</Texto>
-                </DadoApresentado>
+                <DadoAvaliacao key={index} {...dado} />
             ))}    
         </DivAvaliacoes>
     )
