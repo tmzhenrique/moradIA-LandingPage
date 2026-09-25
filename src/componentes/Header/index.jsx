@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link, useLocation, useNavigate } from 'react-router';
+import { rolarAteSecao } from '../../utils/rolarAteSecao.js';
 import LogoMoradia from '../ComponentesPadrao/LogoMoradia/index.jsx';
 
 const HeaderLP = styled.header`
@@ -83,10 +84,7 @@ function Header(){
             navigate('/', { state: { secao: ancora } });
             return;
         }
-        const secao = document.querySelector(ancora);
-        if (secao) {
-            secao.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
+        rolarAteSecao(ancora);
     }
 
     return(

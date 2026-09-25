@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router';
+import { rolarAteSecao } from '../../utils/rolarAteSecao.js';
 import Apresentacao from '../../componentes/Apresentacao/index.jsx';
 import ComoFunciona from '../../componentes/ComoFunciona/index.jsx';
 import Indicadores from '../../componentes/Indicadores/index.jsx';
@@ -13,7 +14,7 @@ function Home(){
   useEffect(() => {
     const secao = location.state?.secao;
     if (secao) {
-      document.querySelector(secao)?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      rolarAteSecao(secao);
     }
   }, [location]);
 
