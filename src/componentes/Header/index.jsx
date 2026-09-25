@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link, useLocation, useNavigate } from 'react-router';
 import LogoMoradia from '../ComponentesPadrao/LogoMoradia/index.jsx';
 
 const HeaderLP = styled.header`
@@ -71,23 +72,33 @@ const AncoraNavDestaque = styled(AncoraNav)`
     }
 `
 
-function rolarParaSecao(evento, ancora) {
-    evento.preventDefault();
-    const secao = document.querySelector(ancora);
-    if (secao) {
-        secao.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-}
-
 function Header(){
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    function rolarParaSecao(evento, ancora) {
+        evento.preventDefault();
+        // Fora da Home a seção não existe: navega para a Home e ela faz a rolagem
+        if (location.pathname !== '/') {
+            navigate('/', { state: { secao: ancora } });
+            return;
+        }
+        const secao = document.querySelector(ancora);
+        if (secao) {
+            secao.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
+
     return(
         <HeaderLP>
-            <LogoMoradia></LogoMoradia>
+            <Link to="/" style={{ textDecoration: 'none' }}>
+                <LogoMoradia></LogoMoradia>
+            </Link>
             <DivLinksHeader>
                 <AncoraNav href="#ComoFunciona" onClick={(evento) => rolarParaSecao(evento, '#ComoFunciona')}>Como funciona</AncoraNav> 
                 <AncoraNav href="#Indicadores" onClick={(evento) => rolarParaSecao(evento, '#Indicadores')}>Indicadores</AncoraNav>
                 <AncoraNav href='#Depoimentos'  onClick={(evento) => rolarParaSecao(evento, '#Depoimentos')}>Feedbacks</AncoraNav>
-                <AncoraNavDestaque>Encontrar minha cidade</AncoraNavDestaque>
+                <AncoraNavDestaque as={Link} to="/encontrar-cidade">Encontrar minha cidade</AncoraNavDestaque>
             </DivLinksHeader>  
         </HeaderLP>
     )

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router";
 import imagem_mulher_celular from "../../assets/imagem_mulher_celular.jpeg";
 import '../../index.css';
 import { Texto } from "../ComponentesPadrao/Texto";
@@ -66,7 +67,8 @@ const AncorasApresentacao = styled.div`
     }
 `
 
-const AncoraApresentacaoRoxo = styled.a`
+const AncoraApresentacaoRoxo = styled(Link)`
+    text-decoration: none;
     cursor:pointer;
     display: flex;
     align-items: center;
@@ -121,7 +123,7 @@ function Apresentacao({id}){
                     <Texto>Descubra quais cidades combinam com seu estilo de vida, orçamento, objetivos e preferências. Nós analisamos centenas de dados para você morar no lugar certo.</Texto>
                 </TextosApresentacao>
                 <AncorasApresentacao>
-                    <AncoraApresentacaoRoxo>Encontrar minha cidade</AncoraApresentacaoRoxo>
+                    <AncoraApresentacaoRoxo to="/encontrar-cidade">Encontrar minha cidade</AncoraApresentacaoRoxo>
                     <AncoraApresentacaoTransparente>
                         <AncoraApresentacaoTransparenteTexto>Como funciona</AncoraApresentacaoTransparenteTexto>
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
