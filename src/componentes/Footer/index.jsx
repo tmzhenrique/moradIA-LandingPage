@@ -7,25 +7,43 @@ const SectionFooter = styled.section`
     display: flex;
     flex-direction: column;
     background-color: #FFFFFF;
-    padding: 64px 80px 40px 80px;
-    border-top: solid 1px #E5E7EB;
-    gap: 30px;
+    padding: 4rem 5rem 2.5rem 5rem;
+    border-top: solid 0.0625rem #E5E7EB;
+    gap: 1.875rem;
+
+    @media (max-width: 64rem){
+        padding: 3rem 2rem 2rem 2rem;
+    }
+
+    @media (max-width: 48rem){
+        padding: 2.5rem 1.25rem 1.5rem 1.25rem;
+    }
 `
 
 const DivsFooter = styled.div`
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+
+    @media (max-width: 48rem){
+        flex-direction: column;
+        gap: 2.5rem;
+    }
 `
 const DivSuperiorDireita = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 1rem;
 `
 
 const DivSuperiorEsquerda = styled.div`
     display: flex;
-    gap: 64px;
+    gap: 4rem;
+
+    @media (max-width: 48rem){
+        flex-wrap: wrap;
+        gap: 2.5rem;
+    }
 `
 
 const listaFooter = [
@@ -77,8 +95,8 @@ function Footer(){
         <SectionFooter>
             <DivsFooter>
                 <DivSuperiorDireita>
-                    <LogoMoradia tamanhoLogo ={'12px'} posicao ={'flex-start'}></LogoMoradia>
-                    <Texto tamanho='14px'>Encontre o melhor lugar para viver com base em <br/>inteligência de dados e estatísticas reais.</Texto>
+                    <LogoMoradia tamanhoLogo ={'0.75rem'} posicao ={'flex-start'}></LogoMoradia>
+                    <Texto tamanho='0.875rem'>Encontre o melhor lugar para viver com base em <br/>inteligência de dados e estatísticas reais.</Texto>
                 </DivSuperiorDireita>
                 <DivSuperiorEsquerda>
                             <DivsPS lista={listaFooter} /> 
@@ -86,7 +104,7 @@ function Footer(){
                 </DivSuperiorEsquerda>
             </DivsFooter>
             <DivsFooter>
-                <Texto tamanho='14px' cor='#9CA3AF'>© 2026 MoradIA. Todos os direitos reservados.</Texto> 
+                <Texto tamanho='0.875rem' cor='#9CA3AF'>© 2026 MoradIA. Todos os direitos reservados.</Texto> 
             </DivsFooter>     
         </SectionFooter>
     )

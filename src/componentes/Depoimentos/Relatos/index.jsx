@@ -32,37 +32,53 @@ const listaRelatos = [
 const DivTodosRelatos = styled.div`
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 1.875rem;
+
+    @media (max-width: 64rem){
+        flex-wrap: wrap;
+        gap: 1.25rem;
+    }
+
+    @media (max-width: 48rem){
+        flex-direction: column;
+        align-items: center;
+    }
 `
 
 const DivRelato = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    padding: 20px;
+    gap: 0.9375rem;
+    padding: 1.25rem;
     background-color: #FFFF;
-    border-radius: 20px;
-    width: 300px;
-    border: solid 1px #E5E7EB;
+    border-radius: 1.25rem;
+    width: 18.75rem;
+    border: solid 0.0625rem #E5E7EB;
+
+    @media (max-width: 48rem){
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 28rem;
+    }
 `
 
 const Match = styled.p`
     font-family: var(--fonte-moradia);
     color: var(--roxo-moradia);
-    font-size: 13px;
+    font-size: 0.8125rem;
     text-align: center;
     font-weight: 700;
     width: 75%;
-    padding: 7px 0.5rem;
+    padding: 0.4375rem 0.5rem;
     background-color: #EFEDFF;
-    border-radius: 15px;
+    border-radius: 0.9375rem;
 `
 const DivPerfil = styled.div`
     display: flex;
     align-items: center;
-    padding-top: 20px;
-    border-top: solid 1px #E5E7EB;
-    gap: 7px;
+    padding-top: 1.25rem;
+    border-top: solid 0.0625rem #E5E7EB;
+    gap: 0.4375rem;
     margin-top: auto;
 `
 const DivPerfilMenor = styled.div`
@@ -76,10 +92,10 @@ const Sigla = styled.h2`
     justify-content: center;
     text-align: center;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 0.875rem;
     color: #FFFF;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 0.625rem;
+    border-radius: 0.3125rem;
     background-color: var(--roxo-moradia);
 `
 function Relatos(){
@@ -88,7 +104,7 @@ function Relatos(){
             {listaRelatos.map((relato,index) => (
                 <DivRelato key={index}>
                         <Match>{relato.mensagemMatch}</Match>
-                        <svg xmlns="http://w3.org" viewBox="0 0 130 24" width="100px" height="18px">
+                        <svg xmlns="http://w3.org" viewBox="0 0 130 24" width="6.25rem" height="1.125rem">
                             <defs>
                                 <g id="star">
                                 <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="#FFD700"/>
@@ -100,12 +116,12 @@ function Relatos(){
                             <use href="#star" x="78" y="0" />
                             <use href="#star" x="104" y="0" />
                         </svg>
-                        <Texto  cor='#14152B' tamanho='15px'>{relato.comentario}</Texto>
+                        <Texto  cor='#14152B' tamanho='0.9375rem'>{relato.comentario}</Texto>
                         <DivPerfil>
                             <Sigla>{relato.sigla}</Sigla>
                             <DivPerfilMenor>
-                                <Titulo posicao='flex-start' tamanho='18px'>{relato.nome}</Titulo>
-                                <Texto tamanho='14px'>{relato.descricao}</Texto>
+                                <Titulo posicao='flex-start' tamanho='1.125rem'>{relato.nome}</Titulo>
+                                <Texto tamanho='0.875rem'>{relato.descricao}</Texto>
                             </DivPerfilMenor>
                         </DivPerfil>
                 </DivRelato>

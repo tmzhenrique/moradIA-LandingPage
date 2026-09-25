@@ -5,7 +5,7 @@ import styled from "styled-components";
 const DivTituloDepoimentos = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.25rem;
 `
 
 function TituloDepoimentos(){

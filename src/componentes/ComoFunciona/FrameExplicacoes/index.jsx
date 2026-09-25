@@ -38,21 +38,33 @@ const dadosExplicaoes = [
 
 const GradeExplicacoes = styled.div`
     display: flex;
-    gap: 32px;
+    gap: 2rem;
+
+    @media (max-width: 64rem){
+        gap: 1.25rem;
+    }
+
+    @media (max-width: 48rem){
+        flex-direction: column;
+    }
 `
 const DivExplicacoes = styled.div`
     display:flex;
     flex-direction: column;
     background-color: #F8FAFC;
-    border-radius: 16px;
-    padding: 32px;
-    gap: 20px;
+    border-radius: 1rem;
+    padding: 2rem;
+    gap: 1.25rem;
+
+    @media (max-width: 64rem){
+        padding: 1.5rem;
+    }
 `
 
 const TextosExplicacao = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 0.5rem;
 `
 
 const TextoExplicacao = styled.p`
@@ -62,12 +74,12 @@ const TextoExplicacao = styled.p`
 `
 const Svg = styled.div`
     display: flex;
-    width: 21.6px;
+    width: 1.35rem;
     justify-content: center;
     align-items: center;
     background-color: #EEF2FF;
-    padding: 15px 15px;
-    border-radius: 10px;
+    padding: 0.9375rem 0.9375rem;
+    border-radius: 0.625rem;
 `
 
 function FrameExplicacoes(){
@@ -80,7 +92,7 @@ function FrameExplicacoes(){
                                 </Svg>
                                 <TextosExplicacao>
                                     <Titulo 
-                                        tamanho='18px' 
+                                        tamanho='1.125rem' 
                                         peso='700' 
                                         posicao='flex-start'
                                     >{item.titulo}</Titulo>

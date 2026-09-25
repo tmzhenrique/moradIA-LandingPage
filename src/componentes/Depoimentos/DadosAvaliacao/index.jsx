@@ -27,14 +27,26 @@ const dados = [
 
 const DivAvaliacoes = styled.div`
     display: flex;
-    margin-top: 40px;
+    margin-top: 2.5rem;
     justify-content: center;
-    gap: 40px
+    gap: 2.5rem;
+
+    @media (max-width: 48rem){
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
 `
 const DadoApresentado = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0.625rem;
+
+    @media (max-width: 48rem){
+        & > p{
+            text-align: center;
+        }
+    }
 `
 
 function DadoAvaliacao({ valorFinal, casasDecimais, sufixo, subtitulo }) {
@@ -43,8 +55,8 @@ function DadoAvaliacao({ valorFinal, casasDecimais, sufixo, subtitulo }) {
 
     return (
         <DadoApresentado ref={referencia}>
-            <Titulo tamanho='30px'>{numeroExibido}{sufixo}</Titulo>
-            <Texto tamanho='15px'>{subtitulo}</Texto>
+            <Titulo tamanho='1.875rem'>{numeroExibido}{sufixo}</Titulo>
+            <Texto tamanho='0.9375rem'>{subtitulo}</Texto>
         </DadoApresentado>
     )
 }

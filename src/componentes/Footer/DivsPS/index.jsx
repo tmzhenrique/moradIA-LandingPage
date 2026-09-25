@@ -5,13 +5,13 @@ import { Titulo } from "../../ComponentesPadrao/Titulo/index.jsx";
 const DivElementos = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 0.75rem;
 `
 
 const Ancora = styled.a`
     text-decoration: none;
     color: #6B7280;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 400;
     font-family: var(--fonte-moradia);
 
@@ -26,7 +26,7 @@ function DivsPS({lista}){
             {lista.map((elemento,index) => ( 
                             
                               elemento.id === 'destaque' ? (
-                                    <Titulo key={index} tamanho='14px' posicao='flex-start'>{elemento.texto}</Titulo>
+                                    <Titulo key={index} tamanho='0.875rem' posicao='flex-start'>{elemento.texto}</Titulo>
                                 ) : (
                                     <Ancora key={index} href={elemento.link}>{elemento.texto}</Ancora>
                                 )                      

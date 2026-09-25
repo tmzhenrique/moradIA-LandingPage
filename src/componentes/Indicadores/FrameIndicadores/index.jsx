@@ -1,29 +1,51 @@
 import styled from "styled-components";
 import { Titulo } from "../../ComponentesPadrao/Titulo";
 import {Texto} from "../../ComponentesPadrao/Texto"
-import { listaIndicadores } from "./ListaIndicadores/listaIndicadores1";
 
 const DivIndicadores = styled.div`
     display: flex;
-    gap: 24px;
+    gap: 1.5rem;
     justify-content: center;
+
+    @media (max-width: 64rem){
+        flex-wrap: wrap;
+    }
+
+    @media (max-width: 48rem){
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
 `
 const DivIndividual = styled.div`
     display: flex;
-    padding: 20px;
-    gap: 16px;
-    max-width: 272px;
+    padding: 1.25rem;
+    gap: 1rem;
+    max-width: 17rem;
     background-color: #FFFFFF;
-    border: solid 1px #E5E7EB;
-    border-radius: 16px;
+    border: solid 0.0625rem #E5E7EB;
+    border-radius: 1rem;
     align-items: center;
     justify-content: center;
+
+    @media (max-width: 48rem){
+        max-width: none;
+        justify-content: flex-start;
+    }
 `
 
 const DivTextos = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 0.25rem;
+
+    @media (max-width: 48rem){
+        min-width: 0;
+
+        & > h1{
+            width: auto !important;
+        }
+    }
 `
 
 const SvgDiv = styled.div`
@@ -31,8 +53,8 @@ const SvgDiv = styled.div`
     justify-content: center;
     align-items: center;
     background-color: #EEF2FF;
-    padding: 15px 15px;
-    border-radius: 10px;
+    padding: 0.9375rem 0.9375rem;
+    border-radius: 0.625rem;
 `
 
 function FrameIndicadores({lista}){
@@ -44,8 +66,8 @@ function FrameIndicadores({lista}){
                     {item.svgSimbolo}
                 </SvgDiv>
                 <DivTextos>
-                    <Titulo tamanho='16px' peso='700' posicao='flex-start' style={{width: '206px'}}>{item.titulo}</Titulo>
-                    <Texto tamanho='12px'>{item.subtitulo}</Texto>
+                    <Titulo tamanho='1rem' peso='700' posicao='flex-start' style={{width: '12.875rem'}}>{item.titulo}</Titulo>
+                    <Texto tamanho='0.75rem'>{item.subtitulo}</Texto>
                 </DivTextos>  
             </DivIndividual>
             ))}  

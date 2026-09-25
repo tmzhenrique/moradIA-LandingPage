@@ -2,7 +2,7 @@ import styled, { keyframes } from "styled-components";
 import { useVisivel } from "../../../hooks/useVisivel";
 
 const surgir = keyframes`
-    from { opacity: 0; transform: translateY(24px); }
+    from { opacity: 0; transform: translateY(1.5rem); }
     to { opacity: 1; transform: translateY(0); }
 `
 

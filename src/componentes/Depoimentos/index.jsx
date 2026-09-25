@@ -7,8 +7,16 @@ import styled from "styled-components";
 const SectionDepoimentos = styled.section`
     display: flex; 
     flex-direction: column;
-    padding: 50px;
-    gap: 15px;
+    padding: 3.125rem;
+    gap: 0.9375rem;
+
+    @media (max-width: 64rem){
+        padding: 3.125rem 2rem;
+    }
+
+    @media (max-width: 48rem){
+        padding: 3rem 1.25rem;
+    }
 `
 
 function Depoimentos({id}){

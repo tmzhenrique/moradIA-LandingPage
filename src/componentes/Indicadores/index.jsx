@@ -7,18 +7,28 @@ import { listaIndicadores2 } from "./FrameIndicadores/ListaIndicadores/listaIndi
 const SectionIndicadores = styled.section`
     display: flex;
     flex-direction: column;
-    border-top: 1px solid #E5E7EB;
-    border-bottom: 1px solid #E5E7EB;
-    padding: 96px 80px;
-    gap: 64px;
+    border-top: 0.0625rem solid #E5E7EB;
+    border-bottom: 0.0625rem solid #E5E7EB;
+    padding: 6rem 5rem;
+    gap: 4rem;
     justify-content: center;
+
+    @media (max-width: 64rem){
+        padding: 4rem 2rem;
+        gap: 3rem;
+    }
+
+    @media (max-width: 48rem){
+        padding: 3rem 1.25rem;
+        gap: 2.5rem;
+    }
 `
 
 const DivIndicadores = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 24px;
+    gap: 1.5rem;
 `
 
 function Indicadores({id}){
