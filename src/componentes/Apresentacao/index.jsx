@@ -80,8 +80,11 @@ const AncoraApresentacaoRoxo = styled(Link)`
     color: #FFFF;
     font-weight: 700;
     font-size: 1rem;
+    transition: transform 0.3s, filter 0.2s;
 
     &:hover{
+        transform: scale(1.05);
+        filter: brightness(1.1);
         background-color: #EEF2FF;
         color: #4F46E5;
         box-shadow: inset 0 0 0 0.125rem #4F46E5;
@@ -97,8 +100,10 @@ const AncoraApresentacaoTransparente = styled.a`
     align-items: center;
     padding: 0.125rem 2rem;
     gap: 0.5rem;
+    transition: transform 0.5s; 
 
     &:hover{    
+        transform: scale(1.05);
         border-radius: 0.75rem;
         background-color: rgba(238, 242, 255,0.7);
     }

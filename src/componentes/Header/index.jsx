@@ -61,6 +61,7 @@ const AncoraNavDestaque = styled(AncoraNav)`
     border-radius: 0.5rem;
     padding: 0.625rem 1.25rem;
     background-color: #4F46E5;
+    transition: background-color 0.2s;
 
     &:hover{
         background-color: #EEF2FF;

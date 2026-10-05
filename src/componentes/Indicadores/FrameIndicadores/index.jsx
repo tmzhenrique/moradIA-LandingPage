@@ -16,6 +16,8 @@ const DivIndicadores = styled.div`
         align-items: stretch;
         gap: 1rem;
     }
+
+    
 `
 const DivIndividual = styled.div`
     display: flex;
@@ -27,10 +29,15 @@ const DivIndividual = styled.div`
     border-radius: 1rem;
     align-items: center;
     justify-content: center;
+    transition: transform 0.3s;
 
     @media (max-width: 48rem){
         max-width: none;
         justify-content: flex-start;
+    }
+
+    &:hover{ 
+        transform: scale(1.04);
     }
 `
 

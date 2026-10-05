@@ -55,9 +55,15 @@ const DivExplicacoes = styled.div`
     border-radius: 1rem;
     padding: 2rem;
     gap: 1.25rem;
+    transition: transform 0.5s, box-shadow 0.5s;
 
     @media (max-width: 64rem){
         padding: 1.5rem;
+    }
+
+    &:hover{
+        transform: translateY(-6px);
+        box-shadow: 0 16px 32px -12px rgba(79, 70, 229, 0.5);
     }
 `
 
